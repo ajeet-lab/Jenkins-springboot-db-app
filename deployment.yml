@@ -16,7 +16,7 @@ spec:
         - name: springboot-db-k8s
           image: ajeet9415/sb-db-app:01 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
-        - name: mysqlDB
-          image: mysql
+        - name: mysqldb
+          image: mysql:latest
           ports:
             - containerPort: 8080 # The port that the container is running on in the clustertes
