@@ -1,0 +1,7 @@
+org/springdb/entities/UserEntities.class
+org/springdb/controllers/UserController.class
+org/springdb/JenkinsSpringbootDbAppApplication.class
+org/springdb/helpers/ApiResponse.class
+org/springdb/services/impl/UserServiceImpl.class
+org/springdb/services/UserService.class
+org/springdb/repos/UserRepo.class

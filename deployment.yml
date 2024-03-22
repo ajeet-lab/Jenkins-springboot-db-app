@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: springboot-db-k8s-app
+spec:
+  selector:
+    matchLabels:
+      app: springboot-db-k8s
+  replicas: 2 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: springboot-db-k8s
+    spec:
+      containers:
+        - name: springboot-db-k8s
+          image: ajeet9415/sb-db-app:01 # Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+        - name: mysqlDB
+          image: mysql
+          ports:
+            - containerPort: 8080 # The port that the container is running on in the clustertes
